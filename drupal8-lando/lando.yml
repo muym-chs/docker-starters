@@ -1,0 +1,48 @@
+name: drupal8-app
+recipe: drupal8
+config:
+  php: '7.2'
+  composer_version: '2.0.7'
+  via: nginx
+  webroot: .
+  database: mariadb
+  drush: ^8
+  xdebug: true
+#  config:
+#    database: config/my-custom.cnf
+#    php: config/php.ini
+#    server: config/server.conf
+#    vhosts: config/default.conf
+tooling:
+  drupal:
+    cmd: "/app/vendor/bin/drupal --root=/app/web"
+events:
+  pre-destroy:
+    - appserver: ./lando_assets/scripts/clean_appserver.sh
+services:
+  appserver:
+#    build_as_root:
+#      - apt update -y && apt install -y libxslt1-dev && docker-php-ext-install xsl
+    run:
+      - ./lando_assets/scripts/init_appserver.sh
+  #  phpqa:
+  #    type: compose
+  #    app_mount: delegated
+  #    services:
+  #      image: zdenekdrahos/phpqa:v1.25.0-php7.2
+  #      command: docker run --rm -it zdenekdrahos/phpqa:v1.25.0-php7.2 sh -c "ls -la; phpqa --analyzedDirs ./modules --buildDir ./build --output cli --ignoredDirs vendor,build;"
+  cache:
+    type: memcached
+    portforward: true
+#  elasticsearch:
+#    type: elasticsearch
+#    portforward: true
+#    mem: 1025m
+#    plugins: []
+#    config:
+#      server: SEE BELOW
+  mailhog:
+    type: mailhog
+    portforward: true
+    hogfrom:
+      - appserver
