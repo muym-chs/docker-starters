@@ -6,3 +6,10 @@ skeleton_module.default_controller_page:
     _title: 'page'
   requirements:
     _permission: 'access content'
+skeleton_module.default_form:
+  path: '/skeleton_module/form/default'
+  defaults:
+    _form: '\Drupal\skeleton_module\Form\DefaultForm'
+    _title: 'DefaultForm'
+  requirements:
+    _access: 'TRUE'
