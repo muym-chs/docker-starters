@@ -1,13 +1,7 @@
 {
     "name": "skeleton_module",
     "type": "drupal-module",
-    "description": "Skeleton module",
-    "keywords": [
-    ],
+    "description": "",
     "homepage": "https://www.drupal.org/project/skeleton_module",
-    "minimum-stability": "dev",
-    "support": {
-        "issues": "https://www.drupal.org/project/issues/skeleton_module",
-        "source": "http://cgit.drupalcode.org/skeleton_module",
-    },
+    "minimum-stability": "5",
 }
