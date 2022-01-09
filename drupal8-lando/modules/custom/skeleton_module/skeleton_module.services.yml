@@ -24,3 +24,8 @@ services:
     arguments: ['@config.factory', '@entity_type.manager']
     tags:
       - { name: authentication_provider, provider_id: default_authentication_provider, priority: 100 }
+  skeleton_module.default_service:
+    class: Drupal\skeleton_module\EventSubscriber\DefaultSubscriber
+    arguments: ['@config.manager']
+    tags:
+      - { name: event_subscriber }
