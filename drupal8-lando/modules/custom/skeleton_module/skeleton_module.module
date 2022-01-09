@@ -33,3 +33,24 @@ function skeleton_module_theme() {
     ],
   ];
 }
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_alter().
+ */
+function skeleton_module_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Change form id here.
+  if ($form_id == 'form_test_alter_form') {
+    \Drupal::messenger()->addMessage('form_test_form_alter() executed.');
+
+    $form['submit_alter'] = [
+      '#type' => 'button',
+      '#title' => t('Submit alter'),
+      '#description' => t('Submit alter button'),
+      '#default_value' => 'Submit alter',
+      '#weight' => '0',
+    ];
+
+  }
+}
