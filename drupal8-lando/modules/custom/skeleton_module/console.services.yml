@@ -1,0 +1,11 @@
+services:
+  skeleton_module.skeleton_module_default:
+    class: Drupal\skeleton_module\Command\DefaultCommand
+    arguments: ['@skeleton_module.skeleton_module_default_generator']
+    tags:
+      - { name: drupal.command }
+  skeleton_module.skeleton_module_default_generator:
+    class: Drupal\skeleton_module\Generator\DefaultGenerator
+    arguments: []
+    tags:
+      - { name: drupal.generator }
