@@ -19,3 +19,8 @@ services:
     arguments: ['@config.manager']
     tags:
       - { name: cache.context }
+  authentication.skeleton_module:
+    class: Drupal\skeleton_module\Authentication\Provider\DefaultAuthenticationProvider
+    arguments: ['@config.factory', '@entity_type.manager']
+    tags:
+      - { name: authentication_provider, provider_id: default_authentication_provider, priority: 100 }
