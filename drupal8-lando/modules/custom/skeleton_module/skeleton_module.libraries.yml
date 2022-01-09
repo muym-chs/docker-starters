@@ -1,0 +1,5 @@
+skeleton_module-library:
+  js:
+    js/script.js: {}
+  dependencies:
+    - core/drupal.ajax
