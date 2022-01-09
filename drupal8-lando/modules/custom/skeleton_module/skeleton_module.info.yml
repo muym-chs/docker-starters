@@ -1,0 +1,5 @@
+name: 'skeleton_module'
+type: module
+description: 'Skeleton module'
+core: 8.x
+package: 'Custom'
