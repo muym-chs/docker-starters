@@ -13,3 +13,12 @@ skeleton_module.default_form:
     _title: 'DefaultForm'
   requirements:
     _access: 'TRUE'
+skeleton_module.default_form_config:
+  path: '/admin/config/skeleton_module/defaultformconfig'
+  defaults:
+    _form: '\Drupal\skeleton_module\Form\DefaultFormConfig'
+    _title: 'DefaultFormConfig'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
