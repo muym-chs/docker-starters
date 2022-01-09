@@ -14,3 +14,8 @@ services:
     class: Drupal\skeleton_module\Routing\RouteSubscriber
     tags:
       - { name: event_subscriber }
+  cache_context.skeleton_module:
+    class: Drupal\skeleton_module\CacheContext\DefaultCacheContext
+    arguments: ['@config.manager']
+    tags:
+      - { name: cache.context }
