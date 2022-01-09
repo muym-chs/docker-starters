@@ -1,0 +1,6 @@
+services:
+  skeleton_module.twig.extension:
+    class: Drupal\skeleton_module\TwigExtension\DefaultTwigExtension
+    arguments: []
+    tags:
+      - { name: twig.extension }
