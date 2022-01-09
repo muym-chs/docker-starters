@@ -1,0 +1,8 @@
+
+skeleton_module.default_controller_page:
+  path: '/skeleton_module/page'
+  defaults:
+    _controller: '\Drupal\skeleton_module\Controller\DefaultController::page'
+    _title: 'page'
+  requirements:
+    _permission: 'access content'
