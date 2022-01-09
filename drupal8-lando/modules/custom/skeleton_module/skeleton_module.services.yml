@@ -4,3 +4,9 @@ services:
     arguments: []
     tags:
       - { name: twig.extension }
+  logger.channel.skeleton_module:
+    parent: logger.channel_base
+    arguments: ['skeleton_module']
+  skeleton_module.default_service:
+    class: Drupal\skeleton_module\DefaultService
+    arguments: []
