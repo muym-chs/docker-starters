@@ -10,3 +10,7 @@ services:
   skeleton_module.default_service:
     class: Drupal\skeleton_module\DefaultService
     arguments: []
+  skeleton_module.route_subscriber:
+    class: Drupal\skeleton_module\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
