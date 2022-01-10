@@ -1,0 +1,24 @@
+
+skeleton_module.default_controller_page:
+  path: '/skeleton_module/page'
+  defaults:
+    _controller: '\Drupal\skeleton_module\Controller\DefaultController::page'
+    _title: 'page'
+  requirements:
+    _permission: 'access content'
+skeleton_module.default_form:
+  path: '/skeleton_module/form/default'
+  defaults:
+    _form: '\Drupal\skeleton_module\Form\DefaultForm'
+    _title: 'DefaultForm'
+  requirements:
+    _access: 'TRUE'
+skeleton_module.default_form_config:
+  path: '/admin/config/skeleton_module/defaultformconfig'
+  defaults:
+    _form: '\Drupal\skeleton_module\Form\DefaultFormConfig'
+    _title: 'DefaultFormConfig'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

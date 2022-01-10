@@ -1,0 +1,6 @@
+test:
+  type: local
+  root: /app
+  options:
+    uri: default
+#  arguments:

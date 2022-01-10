@@ -1,0 +1,31 @@
+services:
+  skeleton_module.twig.extension:
+    class: Drupal\skeleton_module\TwigExtension\DefaultTwigExtension
+    arguments: []
+    tags:
+      - { name: twig.extension }
+  logger.channel.skeleton_module:
+    parent: logger.channel_base
+    arguments: ['skeleton_module']
+  skeleton_module.default_service:
+    class: Drupal\skeleton_module\DefaultService
+    arguments: []
+  skeleton_module.route_subscriber:
+    class: Drupal\skeleton_module\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
+  cache_context.skeleton_module:
+    class: Drupal\skeleton_module\CacheContext\DefaultCacheContext
+    arguments: ['@config.manager']
+    tags:
+      - { name: cache.context }
+  authentication.skeleton_module:
+    class: Drupal\skeleton_module\Authentication\Provider\DefaultAuthenticationProvider
+    arguments: ['@config.factory', '@entity_type.manager']
+    tags:
+      - { name: authentication_provider, provider_id: default_authentication_provider, priority: 100 }
+  skeleton_module.default_service:
+    class: Drupal\skeleton_module\EventSubscriber\DefaultSubscriber
+    arguments: ['@config.manager']
+    tags:
+      - { name: event_subscriber }
