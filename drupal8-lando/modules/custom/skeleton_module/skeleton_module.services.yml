@@ -29,3 +29,6 @@ services:
     arguments: ['@config.manager']
     tags:
       - { name: event_subscriber }
+  plugin.manager.example_plugin:
+    class: Drupal\skeleton_module\Plugin\ExamplePluginManager
+    parent: default_plugin_manager
