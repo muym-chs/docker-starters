@@ -3,3 +3,8 @@ entity.default_config_entity.add_form:
   title: 'Add Default config entity'
   appears_on:
     - entity.default_config_entity.collection
+entity.default_content_entity.add_form:
+  route_name: entity.default_content_entity.add_form
+  title: 'Add Default content entity'
+  appears_on:
+    - entity.default_content_entity.collection

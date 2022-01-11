@@ -4,3 +4,23 @@ access content:
 update content:
   title: 'Update content'
   description: 'Update content of my content'
+add default content entity entities:
+  title: 'Create new Default content entity entities'
+
+administer default content entity entities:
+  title: 'Administer Default content entity entities'
+  description: 'Allow to access the administration form to configure Default content entity entities.'
+  restrict access: true
+
+delete default content entity entities:
+  title: 'Delete Default content entity entities'
+
+edit default content entity entities:
+  title: 'Edit Default content entity entities'
+
+view published default content entity entities:
+  title: 'View published Default content entity entities'
+
+view unpublished default content entity entities:
+  title: 'View unpublished Default content entity entities'
+

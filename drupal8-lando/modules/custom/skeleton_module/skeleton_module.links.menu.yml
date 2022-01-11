@@ -12,3 +12,17 @@ entity.default_config_entity.collection:
   description: 'List Default config entity (bundles)'
   parent: system.admin_structure
   weight: 99
+
+# Default content entity menu items definition
+entity.default_content_entity.collection:
+  title: 'Default content entity list'
+  route_name: entity.default_content_entity.collection
+  description: 'List Default content entity entities'
+  parent: system.admin_structure
+  weight: 100
+
+default_content_entity.admin.structure.settings:
+  title: 'Default content entity settings'
+  description: 'Configure Default content entity entities'
+  route_name: default_content_entity.settings
+  parent: system.admin_structure
