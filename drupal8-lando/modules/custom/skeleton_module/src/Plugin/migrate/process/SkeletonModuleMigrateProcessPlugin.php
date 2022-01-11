@@ -7,13 +7,13 @@ use Drupal\migrate\MigrateExecutableInterface;
 use Drupal\migrate\Row;
 
 /**
- * Provides a 'SkeletonModuleProcessPlugin' migrate process plugin.
+ * Provides a 'SkeletonModuleMigrateProcessPlugin' migrate process plugin.
  *
  * @MigrateProcessPlugin(
- *  id = "skeleton_module_process_plugin"
+ *  id = "skeleton_module_migrate_process_plugin"
  * )
  */
-class SkeletonModuleProcessPlugin extends ProcessPluginBase {
+class SkeletonModuleMigrateProcessPlugin extends ProcessPluginBase {
 
   /**
    * {@inheritdoc}
