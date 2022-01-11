@@ -1,0 +1,21 @@
+# Default content entity routing definition
+default_content_entity.settings_tab:
+  route_name: default_content_entity.settings
+  title: 'Settings'
+  base_route: default_content_entity.settings
+
+entity.default_content_entity.canonical:
+  route_name: entity.default_content_entity.canonical
+  base_route: entity.default_content_entity.canonical
+  title: 'View'
+
+entity.default_content_entity.edit_form:
+  route_name: entity.default_content_entity.edit_form
+  base_route: entity.default_content_entity.canonical
+  title: 'Edit'
+
+entity.default_content_entity.delete_form:
+  route_name:  entity.default_content_entity.delete_form
+  base_route:  entity.default_content_entity.canonical
+  title: Delete
+  weight: 10

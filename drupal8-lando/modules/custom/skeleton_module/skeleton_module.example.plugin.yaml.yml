@@ -1,0 +1,8 @@
+# Example example_plugin_yaml plugin definitions.
+# Plugin property $defaults are defined in ExamplePluginYamlManager.
+first:
+  id: one
+  label: One
+second:
+  id: two
+  label: Two

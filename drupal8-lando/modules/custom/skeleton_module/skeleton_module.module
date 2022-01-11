@@ -54,3 +54,31 @@ function skeleton_module_form_alter(&$form, FormStateInterface $form_state, $for
 
   }
 }
+
+/**
+ * Implements hook_theme().
+ */
+function skeleton_module_theme() {
+  return [
+    'default_plugin_block' => [
+      'variables' => [
+        'content' => NULL
+      ],
+      'render element' => 'children',
+    ],
+  ];
+}
+
+use Drupal\Core\Entity\EntityTypeInterface;
+
+/**
+ * Implements hook_entity_bundle_field_info_alter().
+ */
+function skeleton_module_entity_bundle_field_info_alter(&$fields, EntityTypeInterface $entity_type, $bundle) {
+  if ($bundle === 'article') {
+    if (isset($fields['body'])) {
+      // Use the ID as defined in the annotation of the constraint definition.
+      $fields['body']->addConstraint('example_constraint', []);
+    }
+  }
+}
