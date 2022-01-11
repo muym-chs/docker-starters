@@ -54,3 +54,17 @@ function skeleton_module_form_alter(&$form, FormStateInterface $form_state, $for
 
   }
 }
+
+/**
+ * Implements hook_theme().
+ */
+function skeleton_module_theme() {
+  return [
+    'default_plugin_block' => [
+      'variables' => [
+        'content' => NULL
+      ],
+      'render element' => 'children',
+    ],
+  ];
+}
