@@ -1,0 +1,8 @@
+name: Foo
+type: module
+description: 'Provides an example configuration entity.'
+package: Custom
+core: 8.x
+dependencies:
+  - drupal:views
+configure: entity.example.collection

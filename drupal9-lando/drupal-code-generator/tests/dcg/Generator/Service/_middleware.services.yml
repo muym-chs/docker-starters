@@ -1,0 +1,5 @@
+services:
+  foo.middleware:
+    class: Drupal\foo\BarMiddleware
+    tags:
+      - { name: http_middleware, priority: 1000 }
