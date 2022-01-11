@@ -68,3 +68,17 @@ function skeleton_module_theme() {
     ],
   ];
 }
+
+use Drupal\Core\Entity\EntityTypeInterface;
+
+/**
+ * Implements hook_entity_bundle_field_info_alter().
+ */
+function skeleton_module_entity_bundle_field_info_alter(&$fields, EntityTypeInterface $entity_type, $bundle) {
+  if ($bundle === 'article') {
+    if (isset($fields['body'])) {
+      // Use the ID as defined in the annotation of the constraint definition.
+      $fields['body']->addConstraint('example_constraint', []);
+    }
+  }
+}
