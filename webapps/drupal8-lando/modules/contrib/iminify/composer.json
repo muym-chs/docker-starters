@@ -1,0 +1,13 @@
+{
+    "name": "drupal/iminify",
+    "description": "Simplify minification assets in your Drupal app.",
+    "type": "drupal-module",
+    "homepage": "https://www.drupal.org/project/iminify",
+    "support": {
+        "issues": "https://drupal.org/project/issues/iminify",
+        "irc": "irc://irc.freenode.org/drupal-contribute",
+        "source": "https://cgit.drupalcode.org/iminify"
+    },
+    "license": "GPL-2.0+",
+    "minimum-stability": "dev"
+}

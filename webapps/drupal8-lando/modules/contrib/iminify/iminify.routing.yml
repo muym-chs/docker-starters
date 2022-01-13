@@ -1,0 +1,7 @@
+iminify.config:
+  path: /admin/config/development/iminify
+  defaults:
+    _form: \Drupal\iminify\Form\SettingsForm
+    _title: iMinify CSS Settings
+  requirements:
+    _permission: administer iminify

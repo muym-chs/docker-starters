@@ -1,0 +1,4 @@
+administer iminify:
+  title: Administer iMinify Module
+  description: Perform administration tasks for iMinify module.
+  restrict access: true

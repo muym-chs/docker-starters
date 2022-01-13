@@ -1,0 +1,10 @@
+iminify.config:
+  type: config_object
+  label: 'iMinify CSS settings'
+  mapping:
+    css_disable_admin:
+      type: integer
+      label: 'Disable on admin pages'
+    css_use_minified:
+      type: integer
+      label: 'Use CSS Minified Files'

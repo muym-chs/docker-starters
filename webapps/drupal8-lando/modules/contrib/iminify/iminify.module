@@ -1,0 +1,108 @@
+<?php
+
+/**
+ * @file
+ * Hooks and functions for the iminify module.
+ */
+
+use Drupal\Core\Asset\AttachedAssetsInterface;
+use Drupal\Core\Form\FormStateInterface;
+
+define('IMINIFY_CSS_CACHE_CID', 'iminify:css');
+
+/**
+ * Implements hook_css_alter().
+ */
+function iminify_css_alter(array &$scripts, AttachedAssetsInterface $assets) {
+  $do_replace = FALSE;
+  if (\Drupal::config('iminify.config')->get('css_use_minified')) {
+    if (\Drupal::config('iminify.config')->get('css_disable_admin')) {
+      if (!\Drupal::service('router.admin_context')->isAdminRoute()) {
+        $do_replace = TRUE;
+      }
+    }
+    else {
+      $do_replace = TRUE;
+    }
+  }
+
+  if ($do_replace) {
+    $files = \Drupal::service('iminify')->loadAllFiles();
+    $minified_files = [];
+    foreach ($files as $file) {
+      if (!empty($file->minified_uri)) {
+        $minified_files[$file->uri] = $file;
+      }
+    }
+    foreach ($scripts as $path => $file) {
+      if (isset($minified_files[$path])) {
+        $scripts[$path]['data'] = $minified_files[$path]->minified_uri;
+        _iminify_update_scripts($scripts, $path, $minified_files[$path]->minified_uri);
+      }
+    }
+  }
+}
+
+/**
+ * Update script.
+ *
+ * Helper function to change array key, without changing its order.
+ *
+ * @param array $scripts
+ *   The scripts that are attached to the page.
+ * @param string $existing
+ *   The existing file uri.
+ * @param string $new
+ *   The new file uri.
+ */
+function _iminify_update_scripts(array &$scripts, $existing, $new) {
+  $keys = array_keys($scripts);
+  $index = array_search($existing, $keys, TRUE);
+  if ($index !== FALSE) {
+    $keys[$index] = $new;
+    $scripts = array_combine($keys, $scripts);
+  }
+}
+
+/**
+ * Implements hook_FORM_ID_alter().
+ */
+function iminify_form_system_performance_settings_alter(array &$form, FormStateInterface $form_state, $form_id) {
+  if (\Drupal::currentUser()->hasPermission('administer iminify')) {
+
+    // Determine the number of files minified.
+    $files = \Drupal::service('iminify')->loadAllFiles();
+    $files_minified = 0;
+    foreach ($files as $file) {
+      if (!empty($file->minified_uri)) {
+        $files_minified++;
+      }
+    }
+
+    $form['bandwidth_optimization']['css_use_minified'] = [
+      '#type' => 'checkbox',
+      '#title' => t('Use Minified CSS files.'),
+      '#disabled' => ($files_minified) ? FALSE : TRUE,
+      '#description' => t(
+        'Toggle minified CSS files on or off. There are @minified minified files out of @total total files available.'
+      ),
+      '#default_value' => \Drupal::config('iminify.config')->get('css_use_minified'),
+    ];
+
+    $form['#submit'][] = 'iminify_system_performance_settings_submit';
+  }
+}
+
+/**
+ * Helper function to handle submit hook in form alter.
+ *
+ * @param array $form
+ *   The form array.
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *   The form state.
+ */
+function iminify_system_performance_settings_submit(array &$form, FormStateInterface $form_state) {
+  \Drupal::service('config.factory')->getEditable('iminify.config')
+    ->set('css_use_minified', $form_state->getValue('css_use_minified'))
+    ->save();
+}

@@ -1,0 +1,4 @@
+services:
+  iminify:
+    class: Drupal\iminify\IMinifyCss
+    arguments: ['@path.matcher', '@file.mime_type.guesser', '@file.usage', '@file_system']

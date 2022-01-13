@@ -1,0 +1,6 @@
+services:
+  iminify.commands:
+    class: Drupal\iminify\Commands\IMinifyCssCommands
+    arguments: ['@iminify', '@cache.default']
+    tags:
+      - { name: drush.command }

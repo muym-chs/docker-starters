@@ -1,0 +1,5 @@
+iminify.config:
+  title: iMinify CSS settings
+  description: Settings for the iMinify CSS module.
+  route_name: iminify.config
+  parent: system.admin_config_development

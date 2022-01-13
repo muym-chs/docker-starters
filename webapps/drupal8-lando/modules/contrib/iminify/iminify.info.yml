@@ -1,0 +1,14 @@
+name: iMinify
+description: Allows minify in CLI any media assets in Drupal - first added min&swap CSS file.
+package: Performance and scalability
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
+configure: iminify.config
+dependencies:
+  - drupal:file
+
+# Information added by Drupal.org packaging script on 2021-10-16
+version: '8.x-1.2'
+project: 'iminify'
+datestamp: 1634416889
