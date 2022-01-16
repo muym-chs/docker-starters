@@ -1,0 +1,24 @@
+Started by user [8mha:////4HjQaV14Of+fpIVE8X0XFoxXA7Cfd6/JmwYWoiiKqsfHAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+[Wed Oct 23 15:58:44 GMT 2019] Starting branch indexing...
+ > git --version # timeout=10
+ > git ls-remote --symref -- file:///app # timeout=10
+ > git rev-parse --is-inside-work-tree # timeout=10
+Setting origin to file:///app
+ > git config remote.origin.url file:///app # timeout=10
+Fetching & pruning origin...
+Listing remote references...
+ > git config --get remote.origin.url # timeout=10
+ > git --version # timeout=10
+ > git ls-remote -h -- file:///app # timeout=10
+Fetching upstream changes from origin
+ > git config --get remote.origin.url # timeout=10
+ > git fetch --tags --force --progress --prune -- origin +refs/heads/*:refs/remotes/origin/*
+Checking branches...
+  Checking branch master
+      ‘Jenkinsfile’ found
+    Met criteria
+Changes detected: master (1e5ba95d50ea32967843aaf7faaf79a684601c16 → 34acd57af16d57488f84e7326002086986c68187)
+Scheduled build for branch: master
+Processed 1 branches
+[Wed Oct 23 15:58:48 GMT 2019] Finished branch indexing. Indexing took 3.4 sec
+Finished: SUCCESS

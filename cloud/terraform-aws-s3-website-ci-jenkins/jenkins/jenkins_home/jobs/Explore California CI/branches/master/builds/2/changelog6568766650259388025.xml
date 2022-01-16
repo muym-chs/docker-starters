@@ -1,0 +1,13 @@
+commit 34acd57af16d57488f84e7326002086986c68187
+tree 73899c2158d0cdab5e25b52b7caf4df92e79a499
+parent 1e5ba95d50ea32967843aaf7faaf79a684601c16
+author Carlos Nunez <carlosnunez@car-booth-22-mac.content.linkedin.biz> 2019-10-23 08:55:18 -0700
+committer Carlos Nunez <carlosnunez@car-booth-22-mac.content.linkedin.biz> 2019-10-23 08:55:18 -0700
+
+    Fix scripts
+
+    The pipeline didn't recognize \$PWD, so I removed it since the current
+    working directory within my pipeline will be within /app.
+
+
+:100644 100644 08cc40e6956d9dc1209f9f2b673868b0d32fceb5 e97db1bc8f8e9ad4c49e30d8f3c6d8dd98695f35 M	Jenkinsfile
