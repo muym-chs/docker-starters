@@ -86,6 +86,7 @@
         }
     },
     "require-dev": {
+        "chi-teck/drupal-code-generator": "1.33.1",
         "drupal/console": "~1.0"
     }
 }
