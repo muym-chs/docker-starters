@@ -1,0 +1,8 @@
+# Schema for the configuration files of the dcg_theme theme.
+dcg_theme.settings:
+  type: theme_settings
+  label: 'dcg_theme settings'
+  mapping:
+    font_size:
+      type: integer
+      label: Font size

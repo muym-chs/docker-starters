@@ -1,0 +1,63 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Dcg theme module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function dcg_theme_theme() {
+  return [
+    'block_homepage' => [
+      'variables' => ['foo' => NULL],
+    ],
+  ];
+}
+
+/**
+ * Prepares variables for block_homepage template.
+ *
+ * Default template: block_homepage.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - foo: Foo variable description.
+ */
+function template_preprocess_block_homepage(array &$variables) {
+  $variables['foo'] = 'bar';
+}
+
+/**
+ * Implements hook_theme().
+ */
+function dcg_theme_theme() {
+  return [
+    'block_footer_horizontal_links' => [
+      'variables' => ['foo' => NULL],
+    ],
+  ];
+}
+
+/**
+ * Prepares variables for block_footer_horizontal_links template.
+ *
+ * Default template: block_footer_horizontal_links.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - foo: Foo variable description.
+ */
+function template_preprocess_block_footer_horizontal_links(array &$variables) {
+  $variables['foo'] = 'bar';
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function dcg_theme_preprocess_HOOK(&$variables) {
+  // This example is from rdf_preprocess_image(). It adds an RDF attribute
+  // to the image hook's variables.
+  $variables['attributes']['typeof'] = ['foaf:Image'];
+}
