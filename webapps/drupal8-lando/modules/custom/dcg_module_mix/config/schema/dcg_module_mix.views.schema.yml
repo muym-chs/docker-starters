@@ -1,0 +1,15 @@
+views.field.dcg_module_mix_dcgcustomviewsfield:
+  type: views.field.field
+  label: 'DcgCustomViewsField'
+  mapping:
+    example:
+      type: string
+      label: 'Example'
+
+views.argument_default.dcg_module_mix_dcgcustomviewsargumentdefault:
+  type: mapping
+  label: 'DcgCustomViewsArgumentDefault'
+  mapping:
+    example:
+      type: string
+      label: 'Example'

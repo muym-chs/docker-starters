@@ -1,0 +1,28 @@
+.layout--cols-2-wide {
+  outline: solid 1px orange;
+  display: flex;
+  padding: 10px;
+}
+
+.layout--cols-2-wide > .layout__region {
+  outline: solid 1px orange;
+  margin: 10px;
+  padding: 20px;
+}
+
+.layout--cols-2-wide .layout__region--main {
+  width: 66%;
+}
+
+.layout--cols-2-wide .layout__region--sidebar {
+  width: 33%;
+}
+
+@media all and (max-width: 850px) {
+  .layout--cols-2-wide {
+    flex-direction: column;
+  }
+  .layout--cols-2-wide > .layout__region {
+    width: auto;
+  }
+}

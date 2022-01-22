@@ -1,0 +1,41 @@
+# Simple link.
+dcg_module_mix.node_add:
+  title: Add content
+  description: Add new content.
+  menu_name: main
+  route_name: node.add_page
+  weight: 10
+
+# Child link.
+dcg_module_mix.node_add_article:
+  title: Add article
+  menu_name: main
+  parent: dcg_module_mix.node_add
+  route_name: node.add
+  route_parameters:
+    node_type: article
+  weight: 20
+
+# Dynamic link.
+dcg_module_mix.user:
+  menu_name: main
+  class: Drupal\user\Plugin\Menu\LoginLogoutMenuLink
+  weight: 30
+
+# External link.
+dcg_module_mix.drupal.org:
+  title: Drupal.org
+  description: Drupal is an open source platform for building amazing digital experiences.
+  url: https://www.drupal.org
+  menu_name: main
+  weight: 40
+  options:
+    attributes:
+      target: _blank
+
+dcg_module_mix.dcg_settings_form:
+  title: Dcg settings form
+  description: Dcg settings form
+  parent: system.admin_config_system
+  route_name: dcg_module_mix.dcg_settings_form
+  weight: 10

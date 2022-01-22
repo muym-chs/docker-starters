@@ -1,0 +1,31 @@
+dcg_module_mix.controller_page:
+  path: '/dcg-module-mix/controller_page'
+  defaults:
+    _title: 'Controller Page'
+    _controller: '\Drupal\dcg_module_mix\Controller\DcgModuleMixController::build'
+  requirements:
+    _permission: 'access content'
+
+dcg_module_mix.dcg_form_simple:
+  path: '/dcg-module-mix/dcg-form-simple'
+  defaults:
+    _title: 'Dcg Form Simple'
+    _form: 'Drupal\dcg_module_mix\Form\DcgFormSimple'
+  requirements:
+    _permission: 'access content'
+
+dcg_module_mix.dcg_confirm_form:
+  path: '/dcg-module-mix/dcg-confirm-form'
+  defaults:
+    _title: 'Dcg confirm form'
+    _form: 'Drupal\dcg_module_mix\Form\DcgFormConfirmForm'
+  requirements:
+    _permission: 'administer site configuration'
+
+dcg_module_mix.dcg_settings_form:
+  path: '/admin/config/system/dcg-settings-form'
+  defaults:
+    _title: 'Dcg settings form'
+    _form: 'Drupal\dcg_module_mix\Form\DcgFormSettingsForm'
+  requirements:
+    _permission: 'administer site configuration'

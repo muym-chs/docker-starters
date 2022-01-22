@@ -1,0 +1,6 @@
+{
+  "name": "drupal/dcg_module_mix",
+  "type": "drupal-module",
+  "description": "DCG MIX module scaffold",
+  "keywords": ["Drupal"]
+}

@@ -1,0 +1,11 @@
+cols_2_wide:
+  js:
+    layouts/cols_2_wide/cols-2-wide.js: {}
+  css:
+    component:
+      layouts/cols_2_wide/cols-2-wide.css: {}
+
+dcg_module_mix_fielddemo:
+  css:
+    component:
+      css/dcg-module-mix-fielddemo-widget.css: {}

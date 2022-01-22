@@ -1,0 +1,158 @@
+# Field storage.
+field.storage_settings.dcg_module_mix_fielddemo:
+  type: mapping
+  label: Example storage settings
+  mapping:
+    foo:
+      type: string
+      label: Foo
+# Field instance.
+field.field_settings.dcg_module_mix_fielddemo:
+  type: mapping
+  label: Example field settings
+  mapping:
+    bar:
+      type: string
+      label: Bar
+# Default value.
+field.value.dcg_module_mix_fielddemo:
+  type: mapping
+  label: Default value
+  mapping:
+    value_1:
+      type: string
+      label: Value 1
+    value_2:
+      type: uri
+      label: Value 2
+    value_3:
+      type: text
+      label: Value 3
+# Field widget.
+field.widget.settings.dcg_module_mix_fielddemo:
+  type: mapping
+  label: Example widget settings
+  mapping:
+    foo:
+      type: string
+      label: Foo
+# Field formatter.
+field.formatter.settings.dcg_module_mix_fielddemo_default:
+  type: mapping
+  label: Example formatter settings
+  mapping:
+    foo:
+      type: string
+      label: Foo
+
+filter_settings.dcg_module_mix_dcgcustomfilterreversibletransformation:
+  type: filter
+  label: 'DcgCustomFilterReversibleTransformation filter'
+  mapping:
+    example:
+      type: string
+      label: Example
+
+filter_settings.dcg_module_mix_dcgcustomfilterirreversibletransformation:
+  type: filter
+  label: 'DcgCustomFilterIrreversibleTransformation filter'
+  mapping:
+    example:
+      type: string
+      label: Example
+
+filter_settings.dcg_module_mix_dcgcustomfiltermarkuplanguage:
+  type: filter
+  label: 'DcgCustomFilterMarkupLanguage filter'
+  mapping:
+    example:
+      type: string
+      label: Example
+
+filter_settings.dcg_module_mix_dcgcustomfilterhtmlrestrictor:
+  type: filter
+  label: 'DcgCustomFilterHtmlRestrictor filter'
+  mapping:
+    example:
+      type: string
+      label: Example
+
+entity_reference_selection.dcg_module_mix_advanced_user_selection:
+  type: entity_reference_selection.default:user
+  label: 'Advanced user selection handler settings'
+  mapping:
+    foo:
+      type: string
+      label: Foo
+
+condition.plugin.dcg_module_mix_dcgcustomcondition:
+  type: condition.plugin
+  label: 'DcgCustomCondition condition'
+  mapping:
+    age:
+      type: integer
+      label: Age
+
+block.settings.dcg_module_mix_dcgcustomblockplugin:
+  type: block_settings
+  label: 'DcgCustomBlockPlugin block'
+  mapping:
+    foo:
+      type: string
+      label: Foo
+
+action.configuration.dcg_module_mix_update_node_title:
+  type: mapping
+  label: 'Configuration for "Update node title" action'
+  mapping:
+    title:
+      type: string
+      label: Title
+
+views.style.dcg_module_mix_dcgcustomviewsstyle:
+  type: views_style
+  label: 'DcgCustomViewsStyle'
+  mapping:
+    wrapper_class:
+      type: string
+      label: Wrapper class
+
+field.widget.settings.dcg_module_mix_dcgcustomfieldwidget:
+  type: mapping
+  label: DcgCustomFieldWidget widget settings
+  mapping:
+    foo:
+      type: string
+      label: Foo
+
+field.storage_settings.dcg_module_mix_dcgcustomfieldtype:
+  type: mapping
+  label: DcgCustomFieldType storage settings
+  mapping:
+    foo:
+      type: string
+      label: Foo
+
+field.field_settings.dcg_module_mix_dcgcustomfieldtype:
+  type: mapping
+  label: DcgCustomFieldType field settings
+  mapping:
+    bar:
+      type: string
+      label: Bar
+
+field.value.dcg_module_mix_dcgcustomfieldtype:
+  type: mapping
+  label: Default value
+  mapping:
+    value:
+      type: label
+      label: Value
+
+field.formatter.settings.dcg_module_mix_dcgcustomfieldformatter:
+  type: mapping
+  label: DcgCustomFieldFormatter formatter settings
+  mapping:
+    foo:
+      type: string
+      label: Foo

@@ -1,0 +1,78 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Dcg module mix module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+
+/**
+ * Implements hook_dcg_module_mix_info().
+ */
+function dcg_module_mix_dcg_module_mix_info() {
+  return [
+    'foo' => [
+      'id' => 'foo',
+      'label' => t('Foo'),
+      'description' => t('Foo description.'),
+    ],
+    'bar' => [
+      'id' => 'bar',
+      'label' => t('Bar'),
+      'description' => t('Bar description.'),
+    ],
+  ];
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_load().
+ */
+function dcg_module_mix_ENTITY_TYPE_load($entities) {
+  foreach ($entities as $entity) {
+    $entity->foo = mymodule_add_something($entity);
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view().
+ */
+function dcg_module_mix_ENTITY_TYPE_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
+  // Only do the extra work if the component is configured to be displayed.
+  // This assumes a 'mymodule_addition' extra field has been defined for the
+  // entity bundle in hook_entity_extra_field_info().
+  if ($display->getComponent('mymodule_addition')) {
+    $build['mymodule_addition'] = [
+      '#markup' => mymodule_addition($entity),
+      '#theme' => 'mymodule_my_additional_field',
+    ];
+  }
+}
+
+use Drupal\Core\Template\Attribute;
+
+/**
+ * Prepares variables for views-style-dcg-module-mix-dcgcustomviewsstyle.html.twig template.
+ */
+function template_preprocess_views_style_dcg_module_mix_dcgcustomviewsstyle(&$variables) {
+
+  $view = $variables['view'];
+  $options = $view->style_plugin->options;
+
+  // Fetch wrapper classes from handler options.
+  if ($options['wrapper_class']) {
+    $variables['attributes']['class'] = explode(' ', $options['wrapper_class']);
+  }
+
+  $variables['default_row_class'] = $options['default_row_class'];
+  foreach ($variables['rows'] as $id => $row) {
+    $variables['rows'][$id] = [];
+    $variables['rows'][$id]['content'] = $row;
+    $variables['rows'][$id]['attributes'] = new Attribute();
+    if ($row_class = $view->style_plugin->getRowClass($id)) {
+      $variables['rows'][$id]['attributes']->addClass($row_class);
+    }
+  }
+}

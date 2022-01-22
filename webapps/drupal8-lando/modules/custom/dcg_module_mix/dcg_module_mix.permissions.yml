@@ -1,0 +1,4 @@
+administer dcg_module_mix configuration:
+  title: 'Administer dcg_module_mix configuration'
+  description: 'Optional description.'
+  restrict access: true
