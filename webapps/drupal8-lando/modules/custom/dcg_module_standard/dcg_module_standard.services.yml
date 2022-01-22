@@ -1,0 +1,6 @@
+services:
+  dcg_module_standard.event_subscriber:
+    class: Drupal\dcg_module_standard\EventSubscriber\DcgModuleStandardSubscriber
+    arguments: ['@messenger']
+    tags:
+      - { name: event_subscriber }

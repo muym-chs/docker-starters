@@ -1,0 +1,14 @@
+dcg_module_configuration_entity.dcg_module_configuration_entity.*:
+  type: config_entity
+  label: dcg_module_configuration_entity
+  mapping:
+    id:
+      type: string
+      label: ID
+    label:
+      type: label
+      label: Label
+    uuid:
+      type: string
+    description:
+      type: string

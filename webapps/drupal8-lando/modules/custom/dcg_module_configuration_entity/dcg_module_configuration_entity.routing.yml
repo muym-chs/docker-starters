@@ -1,0 +1,31 @@
+entity.dcg_module_configuration_entity.collection:
+  path: '/admin/structure/dcg-module-configuration-entity'
+  defaults:
+    _entity_list: 'dcg_module_configuration_entity'
+    _title: 'dcg_module_configuration_entity configuration'
+  requirements:
+    _permission: 'administer dcg_module_configuration_entity'
+
+entity.dcg_module_configuration_entity.add_form:
+  path: '/admin/structure/dcg_module_configuration_entity/add'
+  defaults:
+    _entity_form: 'dcg_module_configuration_entity.add'
+    _title: 'Add a dcg_module_configuration_entity'
+  requirements:
+    _permission: 'administer dcg_module_configuration_entity'
+
+entity.dcg_module_configuration_entity.edit_form:
+  path: '/admin/structure/dcg-module-configuration-entity/{dcg_module_configuration_entity}'
+  defaults:
+    _entity_form: 'dcg_module_configuration_entity.edit'
+    _title: 'Edit a dcg_module_configuration_entity'
+  requirements:
+    _permission: 'administer dcg_module_configuration_entity'
+
+entity.dcg_module_configuration_entity.delete_form:
+  path: '/admin/structure/dcg-module-configuration-entity/{dcg_module_configuration_entity}/delete'
+  defaults:
+    _entity_form: 'dcg_module_configuration_entity.delete'
+    _title: 'Delete a dcg_module_configuration_entity'
+  requirements:
+    _permission: 'administer dcg_module_configuration_entity'

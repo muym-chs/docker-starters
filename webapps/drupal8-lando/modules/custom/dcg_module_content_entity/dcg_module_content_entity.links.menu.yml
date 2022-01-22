@@ -1,0 +1,5 @@
+entity.dcg_module_content_entity_type.collection:
+  title: 'dcg_module_content_entity types'
+  parent: system.admin_structure
+  description: 'Manage and CRUD actions on dcg_module_content_entity type.'
+  route_name: entity.dcg_module_content_entity_type.collection

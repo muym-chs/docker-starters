@@ -1,0 +1,4 @@
+administer dcg_module_standard configuration:
+  title: 'Administer dcg_module_standard configuration'
+  description: 'Optional description.'
+  restrict access: true

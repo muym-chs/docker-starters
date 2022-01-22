@@ -1,0 +1,5 @@
+entity.dcg_module_configuration_entity.overview:
+  title: dcg_module_configuration_entities
+  parent: system.admin_structure
+  description: 'List of dcg_module_configuration_entities to extend site functionality.'
+  route_name: entity.dcg_module_configuration_entity.collection

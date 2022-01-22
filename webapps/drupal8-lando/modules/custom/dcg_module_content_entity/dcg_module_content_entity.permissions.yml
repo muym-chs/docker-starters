@@ -1,0 +1,14 @@
+administer dcg_module_content_entity types:
+  title: 'Administer dcg_module_content_entity types'
+  description: 'Maintain the types of dcg_module_content_entity entity.'
+  restrict access: true
+access dcg_module_content_entity overview:
+  title: 'Access dcg_module_content_entity overview page'
+delete dcg_module_content_entity:
+  title: Delete dcg_module_content_entity
+create dcg_module_content_entity:
+  title: Create dcg_module_content_entity
+view dcg_module_content_entity:
+  title: View dcg_module_content_entity
+edit dcg_module_content_entity:
+  title: Edit dcg_module_content_entity

@@ -1,0 +1,5 @@
+entity.dcg_module_configuration_entity.add_form:
+  route_name: 'entity.dcg_module_configuration_entity.add_form'
+  title: 'Add dcg_module_configuration_entity'
+  appears_on:
+    - entity.dcg_module_configuration_entity.collection

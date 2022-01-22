@@ -1,0 +1,11 @@
+dcg_module_content_entity.type_add:
+  route_name: entity.dcg_module_content_entity_type.add_form
+  title: 'Add dcg_module_content_entity type'
+  appears_on:
+    - entity.dcg_module_content_entity_type.collection
+
+dcg_module_content_entity.add_page:
+  route_name: entity.dcg_module_content_entity.add_page
+  title: 'Add dcg_module_content_entity'
+  appears_on:
+    - entity.dcg_module_content_entity.collection
