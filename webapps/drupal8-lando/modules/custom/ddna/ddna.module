@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Drupal DNA - automated specification module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ddna_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'ddna.overview':
+      return '<p>' . t('Provides Drupal documentation to improve growth and stability of what is inside your Drupal DNA specification') . '</p>';
+  }
+}

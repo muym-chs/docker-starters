@@ -1,0 +1,4 @@
+services:
+  plugin.manager.ddna:
+    class: Drupal\ddna\DrupalDnaManager
+    arguments: ['@container.namespaces', '@cache.discovery', '@module_handler', '@config.factory', '@config.typed']
