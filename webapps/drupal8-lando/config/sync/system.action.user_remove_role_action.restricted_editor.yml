@@ -1,0 +1,14 @@
+uuid: d574b416-ec75-4d8d-9a13-95282bea9730
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.restricted_editor
+  module:
+    - user
+id: user_remove_role_action.restricted_editor
+label: 'Remove the Restricted editor role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: restricted_editor

@@ -1,0 +1,26 @@
+uuid: c2d970ed-595c-4baa-8616-31e9be6fca8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.video.field_video
+    - paragraphs.paragraphs_type.video
+_core:
+  default_config_hash: wwnrQbOEdkL8TdTN0Jkq8hmfjLhCUXBgX2PuMcIJ4GE
+id: paragraph.video.default
+targetEntityType: paragraph
+bundle: video
+mode: default
+content:
+  field_video:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  uid: true

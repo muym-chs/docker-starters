@@ -1,0 +1,22 @@
+uuid: a9384cd0-b264-4437-8609-7c3640c088ee
+langcode: en
+status: true
+dependencies:
+  theme:
+    - thunder_base
+_core:
+  default_config_hash: oDFLc-BfvhPQcJnVk4WxQwZcK8-qWA6V7it6WDjiAqc
+id: thunder_base_local_tasks
+theme: thunder_base
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

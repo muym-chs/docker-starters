@@ -1,0 +1,14 @@
+uuid: 9097d184-ffa1-461a-ab1a-333c267455f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.seo
+  module:
+    - user
+id: user_remove_role_action.seo
+label: 'Remove the Seo role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: seo

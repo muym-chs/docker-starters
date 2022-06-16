@@ -1,0 +1,23 @@
+uuid: 5dc76e4c-995e-45f3-9541-572e6ab0e8ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ivw
+    - node.type.article
+  module:
+    - ivw_integration
+_core:
+  default_config_hash: 93Q2MmrQ60CLgAFAnXahELoaQ8C9hJ7u5EaXPqQ8THA
+id: node.article.field_ivw
+field_name: field_ivw
+entity_type: node
+bundle: article
+label: 'IVW settings'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: ivw_integration_settings

@@ -1,0 +1,25 @@
+uuid: 95b87916-3495-4cb7-8dd6-a78ff906fb8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.status
+  module:
+    - facets
+  theme:
+    - thunder_admin
+_core:
+  default_config_hash: 1II-r1pMPdTVol7SHEpr7SgFyI_25TlpnoHR8N7KwuU
+id: thunder_admin_facet_status
+theme: thunder_admin
+region: content
+weight: -3
+provider: null
+plugin: 'facet_block:status'
+settings:
+  id: 'facet_block:status'
+  label: Status
+  label_display: '0'
+  provider: facets
+  block_id: thunder_admin_facet_status
+visibility: {  }

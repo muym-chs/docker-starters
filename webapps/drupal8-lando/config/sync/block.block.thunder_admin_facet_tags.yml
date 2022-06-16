@@ -1,0 +1,25 @@
+uuid: d2aa009b-0791-42e0-a623-01ee7a64f9a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.tags
+  module:
+    - facets
+  theme:
+    - thunder_admin
+_core:
+  default_config_hash: Z3kQBDpSAdsqIIElsKh5cEBly5AfY7lPruttcGEsGvs
+id: thunder_admin_facet_tags
+theme: thunder_admin
+region: content
+weight: -6
+provider: null
+plugin: 'facet_block:tags'
+settings:
+  id: 'facet_block:tags'
+  label: Tags
+  label_display: '0'
+  provider: facets
+  block_id: thunder_admin_facet_tags
+visibility: {  }

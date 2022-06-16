@@ -1,14 +1,14 @@
-uuid: 7bbb0200-2b30-47c6-8738-d782c2b9e23b
-name: Site-Install
-mail: admin@example.com
+_core:
+  default_config_hash: l58O_yEXSo-SeJi19LXdzTU1tNJG3lmnIhCitRkM1tk
+langcode: en
+uuid: 20b36d08-1f7d-44de-a463-13f4435a66e4
+name: thunder
+mail: no.ok@ok
 slogan: ''
 page:
   403: ''
   404: ''
-  front: /node
+  front: /user/login
 admin_compact_mode: false
 weight_select_max: 100
-langcode: en
 default_langcode: en
-_core:
-  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE

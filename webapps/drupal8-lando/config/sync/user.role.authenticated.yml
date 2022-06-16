@@ -1,19 +1,31 @@
-uuid: fefc159a-59a7-4590-b67a-eb9c38f2785f
+uuid: ab956b5d-2c15-4932-b71d-392d87bba475
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.basic_html
+  module:
+    - access_unpublished
+    - filter
+    - graphql
+    - media
+    - system
+    - thunder_taxonomy
 _core:
-  default_config_hash: btW6TFHajhy7Eo6YUvdFiPh4TcPggo8GBXYctjV6zag
+  default_config_hash: 3IJozmpbAhdbMEObnzkNDlsqU6fEjixLu-CQymMjK04
 id: authenticated
 label: 'Authenticated user'
-weight: 1
+weight: -9
 is_admin: false
 permissions:
-  - 'access comments'
   - 'access content'
-  - 'access shortcuts'
-  - 'access site-wide contact form'
-  - 'post comments'
-  - 'search content'
-  - 'skip comment approval'
+  - 'access user profiles'
+  - 'access_unpublished node article'
+  - 'cancel account'
+  - 'change own username'
+  - 'execute thunder_graphql arbitrary graphql requests'
+  - 'execute thunder_graphql persisted graphql requests'
   - 'use text format basic_html'
+  - 'view media'
+  - 'view published terms in channel'
+  - 'view published terms in tags'

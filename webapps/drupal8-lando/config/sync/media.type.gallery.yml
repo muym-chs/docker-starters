@@ -1,0 +1,17 @@
+uuid: b51b841a-7799-4e4c-aca2-82b1b46f0009
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity_slideshow
+_core:
+  default_config_hash: KCCkuQOCtw_B9CZ1MvUKOp1PhPtfs92g4_P5tO6YntM
+id: gallery
+label: Gallery
+description: ''
+source: slideshow
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_images
+field_map: {  }

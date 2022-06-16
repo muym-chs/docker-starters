@@ -1,0 +1,22 @@
+uuid: 5ed6252d-6a76-4a77-9ddf-72bc2ee1d1e9
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - thunder_base
+_core:
+  default_config_hash: mCyyKJ0bFJxRgtfCeIpdyVLEI17iOhCH6EIKp__0Zt0
+id: thunder_base_messages
+theme: thunder_base
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

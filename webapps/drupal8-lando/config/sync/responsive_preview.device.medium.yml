@@ -1,0 +1,14 @@
+uuid: 083e5608-b4d6-4d7e-9c2a-dc6954c8f518
+langcode: en
+status: 0
+dependencies: {  }
+_core:
+  default_config_hash: uyYADVesD0TjBmqR-Tn9u_R8Psav2Bl5KprLSawl6lI
+id: medium
+label: Tablet
+weight: 0
+orientation: portrait
+dimensions:
+  width: 800
+  height: 1280
+  dppx: 1.325

@@ -1,0 +1,27 @@
+uuid: 7e953675-4d99-4048-87aa-ae2556b306da
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - thunder_base
+_core:
+  default_config_hash: OcEHDeJjeqrf-23gjvlwHGv8rQc9PTGl2aTMWu-of2U
+id: thunder_base_tools
+theme: thunder_base
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Tools
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

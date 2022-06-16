@@ -1,11 +1,13 @@
-uuid: 790c27fd-84fd-44aa-a5ac-ce2293a210cd
+uuid: aac150c0-0172-4585-b2b2-b2cc8f4af86f
 langcode: en
 status: true
 dependencies:
   module:
     - editor
+    - linkit
+    - slick
 _core:
-  default_config_hash: WNeK5FbcY8pXgEpbD_KgRzlF1-5PL3BJXwqaBctPTqw
+  default_config_hash: 5DDvWt-JlW27YUaRboTZKGm-3e_lwqovNDkPPLr3bbw
 name: 'Full HTML'
 format: full_html
 weight: 2
@@ -34,3 +36,18 @@ filters:
     status: true
     weight: 11
     settings: {  }
+  linkit:
+    id: linkit
+    provider: linkit
+    status: true
+    weight: 0
+    settings:
+      title: true
+  slick_filter:
+    id: slick_filter
+    provider: slick
+    status: false
+    weight: 4
+    settings:
+      optionset: default
+      media_switch: ''

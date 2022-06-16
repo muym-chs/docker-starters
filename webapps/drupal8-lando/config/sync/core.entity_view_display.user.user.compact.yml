@@ -1,16 +1,19 @@
-uuid: 029126bb-a0cb-4779-85c5-546261e471c4
+uuid: 4d83dcdb-e1bb-4128-9819-de875dacb0e2
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
+    - field.field.user.user.field_last_password_reset
+    - field.field.user.user.field_password_expiration
+    - field.field.user.user.field_pending_expire_sent
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
     - image
     - user
 _core:
-  default_config_hash: '-cLsS3M3JycipXQt9rEb81_HxKneReoGuRh8ijcOPXs'
+  default_config_hash: mhGvkxcqWtUzB3ID4vZe-Y0dtI_4iCfxriKMCRj1Cuw
 id: user.user.compact
 targetEntityType: user
 bundle: user
@@ -18,12 +21,16 @@ mode: compact
 content:
   user_picture:
     type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: thumbnail
+    third_party_settings: {  }
     weight: 0
     region: content
-    settings:
-      image_style: thumbnail
-      image_link: content
-    third_party_settings: {  }
-    label: hidden
 hidden:
+  field_last_password_reset: true
+  field_password_expiration: true
+  field_pending_expire_sent: true
+  langcode: true
   member_for: true

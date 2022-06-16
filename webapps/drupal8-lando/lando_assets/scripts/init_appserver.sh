@@ -15,7 +15,7 @@ if [ ! -z $LANDO_MOUNT ]; then
   ##################################
   # Drop and recover last dump.    #
   ##################################
-  drush sql-drop -y;
-  zcat lando_assets/db_dump/drupal8_initrecoverymount.sql.gz | drush sql-cli;
+#  drush sql-drop -y;
+#  zcat lando_assets/db_dump/drupal8_initrecoverymount.sql.gz | drush sql-cli;
   drush cr;
 fi

@@ -1,0 +1,12 @@
+uuid: 2f5dce8b-21cc-4295-8e65-b30d16e17e1a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: r6yjH8zaXHKNnCPUbR7zt4xhyUrzX8MlPVphvmchlg8
+id: pinterest
+label: Pinterest
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -785,7 +785,8 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  * development, etc.) installations of this site.
  *
  * Typical uses of settings.local.php include:
- * - Disabling caching.
+ * - D
+ * sabling caching.
  * - Disabling JavaScript/CSS compression.
  * - Rerouting outgoing emails.
  *

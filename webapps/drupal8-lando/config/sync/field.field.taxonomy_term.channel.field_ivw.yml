@@ -1,0 +1,23 @@
+uuid: 84d622f6-bfed-4b47-9fb4-be38230a414f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_ivw
+    - taxonomy.vocabulary.channel
+  module:
+    - ivw_integration
+_core:
+  default_config_hash: uiCn2CmJrUVK6B_EBqQB9PDSzSRKYCLKmXwQpZTdTAc
+id: taxonomy_term.channel.field_ivw
+field_name: field_ivw
+entity_type: taxonomy_term
+bundle: channel
+label: 'IVW settings'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: ivw_integration_settings

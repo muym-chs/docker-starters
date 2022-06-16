@@ -1,28 +1,60 @@
-uuid: cea176cf-abbd-4f6d-8b49-f6bb9972d9f7
+uuid: f00e70c1-dfe7-4124-b09a-a033cd075867
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.rss
-    - field.field.node.article.body
-    - field.field.node.article.comment
-    - field.field.node.article.field_image
+    - field.field.node.article.field_channel
+    - field.field.node.article.field_ivw
+    - field.field.node.article.field_meta_tags
+    - field.field.node.article.field_paragraphs
+    - field.field.node.article.field_seo_title
     - field.field.node.article.field_tags
+    - field.field.node.article.field_teaser_media
+    - field.field.node.article.field_teaser_text
     - node.type.article
   module:
     - user
 _core:
-  default_config_hash: 2rIr6K5Q0UQ9khg0zE_CK-PtJH76UL-BDDZcZnZzwCc
+  default_config_hash: z7_Yz0ouuWuvSXmNxXyfdZaIRx8BXiHftwkswpBs0WE
 id: node.article.rss
 targetEntityType: node
 bundle: article
 mode: rss
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_channel:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_teaser_media:
+    type: entity_reference_entity_view
+    label: inline
+    settings:
+      view_mode: square_m
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
   links:
-    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
     region: content
 hidden:
-  body: true
-  comment: true
-  field_image: true
+  field_ivw: true
+  field_meta_tags: true
+  field_paragraphs: true
+  field_seo_title: true
   field_tags: true
+  field_teaser_text: true
+  langcode: true
+  shariff_field: true

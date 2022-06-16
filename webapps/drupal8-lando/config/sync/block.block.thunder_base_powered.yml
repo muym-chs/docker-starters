@@ -1,0 +1,22 @@
+uuid: f9aa552e-e232-49c3-ade6-4f2a61d2e2a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - thunder
+  theme:
+    - thunder_base
+_core:
+  default_config_hash: FFs5hJKuJF5Vl6u5E7cX_m5bzy1yBrcvPw6Z9fBQJXQ
+id: thunder_base_powered
+theme: thunder_base
+region: footer_fifth
+weight: 10
+provider: null
+plugin: thunder_powered_by_block
+settings:
+  id: thunder_powered_by_block
+  label: 'Powered by Thunder'
+  label_display: '0'
+  provider: thunder
+visibility: {  }
