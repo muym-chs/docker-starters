@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  app:
+    image: ghcr.io/kachar/yadi-app:latest
+    container_name: ${COMPOSE_PROJECT_NAME?}-app
+    restart: always
+
+    environment:
+      APP_ENV: ${APP_ENV?}
+      APP_URL: ${APP_URL?}
+
+    networks:
+      - net-frontend
+
+networks:
+  net-frontend:
+    driver: bridge
