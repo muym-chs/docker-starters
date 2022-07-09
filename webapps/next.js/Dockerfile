@@ -1,45 +1,29 @@
-# Build target base #
-#####################
-FROM node:14-alpine AS base
-WORKDIR /app
-ARG NODE_ENV=production
-ENV PATH=/app/node_modules/.bin:$PATH \
-    NODE_ENV="$NODE_ENV"
-RUN apk --no-cache add curl
-COPY package.json yarn.lock /app/
+#Creates a layer from node:alpine image.
+FROM node:16-alpine
+
+#Sets an environment variable
+ENV PORT 3000
+
+#Sets the working directory for any RUN, CMD, ENTRYPOINT, COPY, and ADD commands
+WORKDIR /usr/src/app
+
+#Copy new files or directories into the filesystem of the container
+COPY package.json /usr/src/app
+COPY yarn.lock /usr/src/app
+
+#Execute commands in a new layer on top of the current image and commit the results
+RUN yarn install
+
+##Copy new files or directories into the filesystem of the container
+COPY . /usr/src/app
+
+#Execute commands in a new layer on top of the current image and commit the results
+RUN npm run build
+
+#RUN chown -R ${USER} ~/.config/yarn/
+#Informs container runtime that the container listens on the specified network ports at runtime
 EXPOSE 3000
 
-# Build target dependencies #
-#############################
-FROM base AS dependencies
-# Install prod dependencies
-RUN yarn install --production && \
-    # Cache prod dependencies
-    cp -R node_modules /prod_node_modules && \
-    # Install dev dependencies
-    yarn install --production=false
+#Allows you to configure a container that will run as an executable
+ENTRYPOINT ["npm", "run"]
 
-# Build target development #
-############################
-FROM dependencies AS development
-COPY . /app
-CMD [ "yarn", "dev" ]
-
-# Build target builder #
-########################
-FROM base AS builder
-COPY --from=dependencies /app/node_modules /app/node_modules
-COPY . /app
-RUN yarn build && \
-    rm -rf node_modules
-
-# Build target production #
-###########################
-FROM base AS production
-COPY --from=builder /app/public /app/public
-COPY --from=builder /app/.next /app/.next
-COPY --from=dependencies /prod_node_modules /app/node_modules
-CMD [ "yarn", "start" ]
-
-HEALTHCHECK --interval=5s --timeout=5s --retries=3 \
-    CMD curl --fail http://localhost:3000 || exit 1
